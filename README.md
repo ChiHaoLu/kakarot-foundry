@@ -7,6 +7,8 @@ $ forge test --fork-url kakarot_sepolia
 
 ### Deploy and Verify
 
+Give your deployer private key for `PRIVATE_KEY=` in the `.env`. Please ensure your deployer address has enough Kakarot Sepolia faucet.
+
 ```sh
 $ forge script ./script/SignatureVerifier.s.sol --broadcast --rpc-url kakarot_sepolia
 
