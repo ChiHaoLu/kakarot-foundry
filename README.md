@@ -1,66 +1,19 @@
-## Foundry
-
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
+## Kakarot-Foundry
 
 ### Test
-
-```shell
-$ forge test
+```sh
+$ forge test --fork-url kakarot_sepolia
 ```
 
-### Format
+### Deploy and Verify
 
-```shell
-$ forge fmt
-```
+```sh
+$ forge script ./script/SignatureVerifier.s.sol --broadcast --rpc-url kakarot_sepolia
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+# If your deployed address is `0x99682dAc0D03F0D12392dCE0B0E34f4AaD0b56E1`
+$ forge verify-contract 0x99682dAc0D03F0D12392dCE0B0E34f4AaD0b56E1 ./src/SignatureVerifier.sol:SignatureVerifier \
+--verifier-url 'https://api.routescan.io/v2/network/testnet/evm/1802203764_2/etherscan' \
+--etherscan-api-key "kakarot_sepolia" \
+--num-of-optimizations 200 \
+--compiler-version "v0.8.26+commit.8a97fa7a"
 ```
