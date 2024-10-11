@@ -29,10 +29,10 @@ Please make sure your solidity version and optimizer is set correctly.
 
 > You don't need the `etherscan-api-key` for Kakarot verifying, just give the string `kakarot_starknet_sepolia` for this field.
 
-If the deployed address is `0xeE2D7486bcE9821DaBB7878840E1ab2cBaaB4379`:
+If the deployed address is `0x1d1688f3CF762fda6E53cb97522487F96edaF1b8`:
 
 ```sh
-$ forge verify-contract 0xeE2D7486bcE9821DaBB7878840E1ab2cBaaB4379 ./src/SignatureVerifier.sol:SignatureVerifier \
+$ forge verify-contract 0x1d1688f3CF762fda6E53cb97522487F96edaF1b8 ./src/SignatureVerifier.sol:SignatureVerifier \
 --verifier-url 'https://api.routescan.io/v2/network/testnet/evm/920637907288165/etherscan' \
 --etherscan-api-key "kakarot_starknet_sepolia" \
 --num-of-optimizations 200 \
