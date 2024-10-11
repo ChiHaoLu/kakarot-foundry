@@ -37,14 +37,4 @@ $ forge verify-contract 0xeE2D7486bcE9821DaBB7878840E1ab2cBaaB4379 ./src/Signatu
 --etherscan-api-key "kakarot_starknet_sepolia" \
 --num-of-optimizations 200 \
 --compiler-version "v0.8.26+commit.8a97fa7a"
->
-Start verifying contract `0x99682dAc0D03F0D12392dCE0B0E34f4AaD0b56E1` deployed on kakarot-sepolia
-
-Submitting verification for [src/SignatureVerifier.sol:SignatureVerifier] 0x99682dAc0D03F0D12392dCE0B0E34f4AaD0b56E1.
-Submitted contract for verification:
-        Response: `OK`
-        GUID: `7e88936a-fe91-5599-9ede-cc19ba05dda9`
-        URL: https://sepolia.kakarotscan.org/address/0x99682dac0d03f0d12392dce0b0e34f4aad0b56e1
 ```
-
-- https://sepolia.kakarotscan.org/
